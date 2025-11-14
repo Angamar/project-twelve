@@ -50,10 +50,6 @@ function App() {
           {error && <p>Error loading users: {error.message}</p>}
           {users && <UserList users={users} />}
         </div>
-
-        <p className={styles.readTheDocs}>
-          Click on the Vite and React logos to learn more
-        </p>
       </div>
     </div>
   );
