@@ -45,7 +45,7 @@ function App() {
         </div>
 
         <div className={styles.userSection}>
-          <h2>Users from API</h2>
+          <h2>Users from API:</h2>
           {isLoading && <p>Loading users...</p>}
           {error && <p>Error loading users: {error.message}</p>}
           {users && <UserList users={users} />}
