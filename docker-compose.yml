@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: packages/api/Dockerfile
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    networks:
+      - app
+
+  ui:
+    build:
+      context: .
+      dockerfile: packages/ui/Dockerfile
+    depends_on:
+      - api
+    ports:
+      - "8080:80"
+    networks:
+      - app
+
+networks:
+  app:

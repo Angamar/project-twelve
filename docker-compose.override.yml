@@ -1,0 +1,37 @@
+version: "3.8"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: packages/api/Dockerfile
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+    volumes:
+      - ./packages/api/src:/app/packages/api/src
+      - ./packages/shared/src:/app/packages/shared/src
+    ports:
+      - "3000:3000"
+    networks:
+      - app
+    command: yarn workspace api dev
+
+  ui:
+    build:
+      context: .
+      dockerfile: packages/ui/Dockerfile
+    depends_on:
+      - api
+    volumes:
+      - ./packages/ui/src:/app/packages/ui/src
+      - ./packages/ui/public:/app/packages/ui/public
+      - ./packages/shared/src:/app/packages/shared/src
+    ports:
+      - "3001:3001"
+    networks:
+      - app
+    command: yarn workspace ui dev
+
+networks:
+  app:
