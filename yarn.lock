@@ -777,6 +777,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@project-twelve/shared@workspace:*, @project-twelve/shared@workspace:packages/shared":
+  version: 0.0.0-use.local
+  resolution: "@project-twelve/shared@workspace:packages/shared"
+  dependencies:
+    rimraf: "npm:^6.0.1"
+    typescript: "npm:^5.8.3"
+    zod: "npm:^3.25.56"
+  languageName: unknown
+  linkType: soft
+
 "@rolldown/pluginutils@npm:1.0.0-beta.27":
   version: 1.0.0-beta.27
   resolution: "@rolldown/pluginutils@npm:1.0.0-beta.27"
@@ -1534,16 +1544,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@your-app/shared@workspace:*, @your-app/shared@workspace:packages/shared":
-  version: 0.0.0-use.local
-  resolution: "@your-app/shared@workspace:packages/shared"
-  dependencies:
-    rimraf: "npm:^6.0.1"
-    typescript: "npm:^5.8.3"
-    zod: "npm:^3.25.56"
-  languageName: unknown
-  linkType: soft
-
 "abbrev@npm:^4.0.0":
   version: 4.0.0
   resolution: "abbrev@npm:4.0.0"
@@ -1683,10 +1683,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "api@workspace:packages/api"
   dependencies:
+    "@project-twelve/shared": "workspace:*"
     "@types/cors": "npm:^2.8.17"
     "@types/express": "npm:^5.0.0"
     "@types/node": "npm:^22.10.1"
-    "@your-app/shared": "workspace:*"
     cors: "npm:^2.8.5"
     express: "npm:^4.21.1"
     helmet: "npm:^8.0.0"
@@ -2427,9 +2427,9 @@ __metadata:
   linkType: hard
 
 "csstype@npm:^3.0.2":
-  version: 3.2.0
-  resolution: "csstype@npm:3.2.0"
-  checksum: 10c0/119715d732d05db0da3b71f602448135b007127073cdda47b69e9d5599475e4aa0f6a15c5f0cdd3f3b1f17251c54adc3c8a516e7358f7fb4cfc51cc6eaf89ded
+  version: 3.2.1
+  resolution: "csstype@npm:3.2.1"
+  checksum: 10c0/923e00230966b5c741fc9bfc1d3695266bad0206b1fc9e9bba5dba1480d7b3ee01973bbdb7e48368d274ed0ce24d177235ababaa44cbc4581f6b36cdc6526530
   languageName: node
   linkType: hard
 
@@ -2712,9 +2712,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.5.249":
-  version: 1.5.252
-  resolution: "electron-to-chromium@npm:1.5.252"
-  checksum: 10c0/a42b164689d4230f1ab8a5e87183b58f5a96e123d2b7b680ca3a94734a04cf6cc4198e813473674ed626623a0cb7cb3ece42373c712a1afc340117ff85845b0f
+  version: 1.5.253
+  resolution: "electron-to-chromium@npm:1.5.253"
+  checksum: 10c0/d6cebe289030992bd7a9d31bfab571f1cfe30405e988ce451de78fc788aa171e8fa2c4122ef30d9c35edc06781a28d6c1c0faa738a1a918d305773305f3020eb
   languageName: node
   linkType: hard
 
@@ -3091,6 +3091,15 @@ __metadata:
   peerDependencies:
     eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0 || ^9.0.0
   checksum: 10c0/1c8d50fa5984c6dea32470651807d2922cc3934cf3425e78f84a24c2dfd972e7f019bee84aefb27e0cf2c13fea0ac1d4473267727408feeb1c56333ca1489385
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-react-refresh@npm:^0.4.24":
+  version: 0.4.24
+  resolution: "eslint-plugin-react-refresh@npm:0.4.24"
+  peerDependencies:
+    eslint: ">=8.40"
+  checksum: 10c0/7471a25663cdec2886b5aec53cff6319475a6704616f96db4eef7ada3cba1236abeb71b4c2db6396e48a3a8a3a416a0266b2eac06bb6ef77d8b5674604ece7fb
   languageName: node
   linkType: hard
 
@@ -6855,6 +6864,7 @@ __metadata:
     eslint-config-prettier: "npm:^10.1.5"
     eslint-plugin-react: "npm:^7.37.5"
     eslint-plugin-react-hooks: "npm:^5.2.0"
+    eslint-plugin-react-refresh: "npm:^0.4.24"
     globals: "npm:^16.2.0"
     husky: "npm:^9.1.7"
     lint-staged: "npm:^16.1.0"
@@ -6865,6 +6875,7 @@ __metadata:
     typescript-eslint: "npm:^8.33.1"
     vitest: "npm:^3.2.3"
     zod: "npm:^3.25.56"
+    zustand: "npm:^5.0.8"
   languageName: unknown
   linkType: soft
 
@@ -6892,6 +6903,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "ui@workspace:packages/ui"
   dependencies:
+    "@project-twelve/shared": "workspace:*"
     "@tanstack/react-query": "npm:^5.59.20"
     "@testing-library/dom": "npm:^10.4.1"
     "@testing-library/jest-dom": "npm:^6.6.3"
@@ -6900,7 +6912,6 @@ __metadata:
     "@types/react": "npm:^18.3.12"
     "@types/react-dom": "npm:^18.3.1"
     "@vitejs/plugin-react": "npm:^4.3.4"
-    "@your-app/shared": "workspace:*"
     cypress: "npm:^13.15.2"
     framer-motion: "npm:^11.11.17"
     jsdom: "npm:^25.0.1"
@@ -7534,5 +7545,26 @@ __metadata:
   version: 3.25.76
   resolution: "zod@npm:3.25.76"
   checksum: 10c0/5718ec35e3c40b600316c5b4c5e4976f7fee68151bc8f8d90ec18a469be9571f072e1bbaace10f1e85cf8892ea12d90821b200e980ab46916a6166a4260a983c
+  languageName: node
+  linkType: hard
+
+"zustand@npm:^5.0.8":
+  version: 5.0.8
+  resolution: "zustand@npm:5.0.8"
+  peerDependencies:
+    "@types/react": ">=18.0.0"
+    immer: ">=9.0.6"
+    react: ">=18.0.0"
+    use-sync-external-store: ">=1.2.0"
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+    immer:
+      optional: true
+    react:
+      optional: true
+    use-sync-external-store:
+      optional: true
+  checksum: 10c0/e865a6f7f1c0e03571701db5904151aaa7acefd6f85541a117085e129bf16e8f60b11f8cc82f277472de5c7ad5dcb201e1b0a89035ea0b40c9d9aab3cd24c8ad
   languageName: node
   linkType: hard

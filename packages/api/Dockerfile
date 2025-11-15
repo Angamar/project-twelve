@@ -22,7 +22,7 @@ COPY packages/api/src packages/api/src
 COPY packages/api/tsconfig.json packages/api/
 
 # Build packages
-RUN yarn workspace @your-app/shared build
+RUN yarn workspace @project-twelve/shared build
 RUN yarn workspace api build
 
 # Production stage

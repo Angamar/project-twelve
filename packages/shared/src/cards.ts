@@ -1,0 +1,63 @@
+const cards = [
+  // Hearts
+  { suit: "hearts", symbol: "A", value: [1, 11] },
+  { suit: "hearts", symbol: "2", value: 2 },
+  { suit: "hearts", symbol: "3", value: 3 },
+  { suit: "hearts", symbol: "4", value: 4 },
+  { suit: "hearts", symbol: "5", value: 5 },
+  { suit: "hearts", symbol: "6", value: 6 },
+  { suit: "hearts", symbol: "7", value: 7 },
+  { suit: "hearts", symbol: "8", value: 8 },
+  { suit: "hearts", symbol: "9", value: 9 },
+  { suit: "hearts", symbol: "10", value: 10 },
+  { suit: "hearts", symbol: "J", value: 12 },
+  { suit: "hearts", symbol: "Q", value: 13 },
+  { suit: "hearts", symbol: "K", value: 14 },
+
+  // Diamonds
+  { suit: "diamonds", symbol: "A", value: [1, 11] },
+  { suit: "diamonds", symbol: "2", value: 2 },
+  { suit: "diamonds", symbol: "3", value: 3 },
+  { suit: "diamonds", symbol: "4", value: 4 },
+  { suit: "diamonds", symbol: "5", value: 5 },
+  { suit: "diamonds", symbol: "6", value: 6 },
+  { suit: "diamonds", symbol: "7", value: 7 },
+  { suit: "diamonds", symbol: "8", value: 8 },
+  { suit: "diamonds", symbol: "9", value: 9 },
+  { suit: "diamonds", symbol: "10", value: 10 },
+  { suit: "diamonds", symbol: "J", value: 12 },
+  { suit: "diamonds", symbol: "Q", value: 13 },
+  { suit: "diamonds", symbol: "K", value: 14 },
+
+  // Clubs
+  { suit: "clubs", symbol: "A", value: [1, 11] },
+  { suit: "clubs", symbol: "2", value: 2 },
+  { suit: "clubs", symbol: "3", value: 3 },
+  { suit: "clubs", symbol: "4", value: 4 },
+  { suit: "clubs", symbol: "5", value: 5 },
+  { suit: "clubs", symbol: "6", value: 6 },
+  { suit: "clubs", symbol: "7", value: 7 },
+  { suit: "clubs", symbol: "8", value: 8 },
+  { suit: "clubs", symbol: "9", value: 9 },
+  { suit: "clubs", symbol: "10", value: 10 },
+  { suit: "clubs", symbol: "J", value: 12 },
+  { suit: "clubs", symbol: "Q", value: 13 },
+  { suit: "clubs", symbol: "K", value: 14 },
+
+  // Spades
+  { suit: "spades", symbol: "A", value: [1, 11] },
+  { suit: "spades", symbol: "2", value: 2 },
+  { suit: "spades", symbol: "3", value: 3 },
+  { suit: "spades", symbol: "4", value: 4 },
+  { suit: "spades", symbol: "5", value: 5 },
+  { suit: "spades", symbol: "6", value: 6 },
+  { suit: "spades", symbol: "7", value: 7 },
+  { suit: "spades", symbol: "8", value: 8 },
+  { suit: "spades", symbol: "9", value: 9 },
+  { suit: "spades", symbol: "10", value: 10 },
+  { suit: "spades", symbol: "J", value: 12 },
+  { suit: "spades", symbol: "Q", value: 13 },
+  { suit: "spades", symbol: "K", value: 14 },
+];
+
+export default cards;

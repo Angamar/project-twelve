@@ -1,4 +1,4 @@
-# TypeScript Fullstack Template
+# Project twelve
 
 A modern TypeScript monorepo template for building fullstack applications with React frontend, Express API, and shared types. Built with Yarn 4 workspaces and proven production patterns.
 
@@ -64,6 +64,7 @@ typescript-fullstack-template/
 ## 🛠️ Technology Stack
 
 ### Frontend
+
 - **React 18** with TypeScript
 - **Vite** for fast development
 - **CSS Modules** for styling
@@ -72,12 +73,14 @@ typescript-fullstack-template/
 - **React Query** for data fetching
 
 ### Backend
+
 - **Node.js** with Express
 - **TypeScript** with ES modules
 - **Zod** for validation
 - **Vitest** for testing
 
 ### DevOps
+
 - **Docker** & Docker Compose
 - **Yarn Workspaces** (monorepo)
 - **ESLint** & **Prettier**
@@ -100,6 +103,7 @@ yarn workspace ui cypress:open
 ## 📦 Package Scripts
 
 ### UI Package
+
 - `yarn workspace ui dev` - Start dev server
 - `yarn workspace ui build` - Build for production
 - `yarn workspace ui start` - Start production server
@@ -107,13 +111,15 @@ yarn workspace ui cypress:open
 - `yarn workspace ui cypress:open` - Open Cypress
 
 ### API Package
+
 - `yarn workspace api dev` - Start dev server
 - `yarn workspace api build` - Build for production
 - `yarn workspace api start` - Start production server
 - `yarn workspace api test` - Run tests
 
 ### Shared Package
-- `yarn workspace @your-app/shared build` - Build shared package
+
+- `yarn workspace @project-twelve/shared build` - Build shared package
 
 ## 🎨 Component Creation
 
@@ -123,6 +129,7 @@ yarn create-component MyComponent
 ```
 
 This creates:
+
 - `ComponentName/ComponentName.tsx`
 - `ComponentName/ComponentName.module.css`
 - `ComponentName/ComponentName.test.tsx`
@@ -131,6 +138,7 @@ This creates:
 ## 🐛 Troubleshooting
 
 **Port already in use:**
+
 ```bash
 # Check what's using the port
 lsof -i :3000
@@ -141,6 +149,7 @@ kill -9 <PID>
 ```
 
 **Docker issues:**
+
 ```bash
 # Reset Docker state
 docker compose down
@@ -149,6 +158,7 @@ docker compose up --build
 ```
 
 **Dependency issues:**
+
 ```bash
 # Clean install
 yarn reset

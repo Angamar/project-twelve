@@ -1,5 +1,5 @@
 {
-  "name": "@your-app/shared",
+  "name": "@project-twelve/shared",
   "version": "1.0.0",
   "description": "Shared types, schemas, and utilities",
   "type": "module",

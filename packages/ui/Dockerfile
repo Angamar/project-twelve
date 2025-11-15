@@ -25,7 +25,7 @@ COPY packages/ui/tsconfig*.json packages/ui/
 COPY packages/ui/vite.config.ts packages/ui/
 
 # Build packages
-RUN yarn workspace @your-app/shared build
+RUN yarn workspace @project-twelve/shared build
 RUN yarn workspace ui build
 
 # Production stage with nginx

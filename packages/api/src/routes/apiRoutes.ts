@@ -1,11 +1,5 @@
-import express from 'express';
-import { userController } from '../controllers/userController';
+import express from "express";
 
 const router = express.Router();
-
-// Example routes - customize for your application
-router.get('/users', userController.getUsers);
-router.post('/users', userController.createUser);
-router.get('/users/:id', userController.getUserById);
 
 export default router;
