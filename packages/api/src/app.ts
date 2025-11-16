@@ -1,24 +1,41 @@
-import express from 'express';
-import cors from 'cors';
-import helmet from 'helmet';
-import apiRoutes from './routes/apiRoutes';
+import express from "express";
+import http from "http";
+import { Server } from "socket.io";
 
 const app = express();
-const port = process.env.PORT || 3000;
+const server = http.createServer(app);
 
-// Middleware
-app.use(helmet());
-app.use(cors());
-app.use(express.json());
-
-// Routes
-app.use('/api', apiRoutes);
-
-// Health check
-app.get('/health', (req, res) => {
-  res.json({ status: 'ok', timestamp: new Date().toISOString() });
+// Setup socket.io server
+const io = new Server(server, {
+  cors: {
+    origin: "*", // For now allow all origins, you can restrict this later
+  },
 });
 
-app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
+io.on("connection", (socket) => {
+  console.log("a user connected:", socket.id);
+
+  socket.on("pingFromClient", (msg) => {
+    console.log("Received from client:", msg);
+    socket.emit("pongFromServer", "pong");
+  });
+
+  socket.on("joinRoom", (roomId) => {
+    socket.join(roomId);
+    console.log(`${socket.id} joined room ${roomId}`);
+  });
+
+  socket.on("sendMessage", ({ roomId, message }) => {
+    // Send message to all in room, including sender:
+    io.to(roomId).emit("roomMessage", { sender: socket.id, message });
+  });
+
+  socket.on("disconnect", () => {
+    console.log("user disconnected:", socket.id);
+  });
+});
+
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
